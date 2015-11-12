@@ -1,0 +1,142 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$main_red_color: #540000;
+$font_color: #fff;
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "_raleway.scss";
+
+.browsehappy { margin: 0.2em 0; background: #ccc; color: #000; padding: 0.2em 0; }
+
+html, body { height: 100%; }
+
+* { margin: 0; }
+
+body { padding: 0; background-color: $main_red_color; width: 100%; font-family: 'raleway', sans-serif; color: $font_color; }
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer { padding-left: 15px; padding-right: 15px; }
+
+/* Custom page header */
+.header { 
+
+	/* Make the masthead heading the same height as the navigation */
+	h3 { margin-top: 0; margin-bottom: 0; line-height: 40px; padding-bottom: 20px; }
+
+	.social-bar { width: 250px; height: 40px; float: right; background: #000; 
+
+		i.fa { font-size: 30px; }
+
+	}
+
+}
+
+.nav {
+
+	&.navbar-nav { margin-right: 20px; margin-top: 25px; }
+
+	& > li > a { color: $font_color; opacity: 0.7; font-size: 16px; padding: 10px 20px;
+
+		&:hover, &:focus { background: none; opacity: 1; }
+
+	}
+
+}
+
+a.btn { font-size: 18px; line-height: 38px; font-weight: 600; color: $font_color; height: 53px; }
+
+.container.slider { float: left; margin-top: -42px; height: 563px; background: url("../images/slider_1.jpg"); 
+
+	div[class*="slide-"] { height: inherit; position: relative;
+
+		&:before { content: ''; background: #540000; opacity: 0.6; width: 100%; height: inherit; display: block; position: absolute; top: 0; left: 0; }
+
+		.text { position: relative; top: 192px; left: 38px;
+
+			p { line-height: 30px;
+
+				&.title { font-size: 36px; font-weight: 600; }
+
+				&.description { font-size: 24px; margin-top: 20px; }
+
+			}
+
+		}
+
+		.call-to-action { padding: 25px 55px; background: rgba(0,0,0,0.7); height: 218px; width: 386px; position: absolute; top: 170px; right: 53px; -webkit-box-shadow: 5px 5px 0px -1px rgba(0,0,0,0.3); -moz-box-shadow: 5px 5px 0px -1px rgba(0,0,0,0.3); box-shadow: 5px 5px 0px -1px rgba(0,0,0,0.3);
+
+			p { font-weight: 100; font-size: 23px; line-height: 30px; letter-spacing: 3px; }
+
+			a.btn.red { background: $main_red_color; min-width: 276px; }
+
+		}
+
+	}
+
+}
+
+.container.hero { padding-bottom: 40px;
+
+	.logo-hero { width: 33%; height: 135px; background: url("../images/logo_hero.png") center no-repeat; position: relative; }
+
+	.swirl { width: 33%; height: 100%; display: block; position: absolute; top: 0; 
+
+		&.left { background: url("../images/swirl_left.png") 0 0 no-repeat; left: 0; }
+
+		&.right { background: url("../images/swirl_right.png") 0 0 no-repeat; right: 0; }
+
+	}
+
+	.hero-wrapper { display: inline-block; margin: 0 auto 40px; }
+
+	a.btn.black { background: #000; padding: 10px 40px; line-height: 34px; }
+
+}
+
+.navbar, .container { width: 100%; }
+
+.border-gradient { width: 100%; height: 1px; background: #fefcea; background: linear-gradient(to right, transparent, #6F2A2A); margin-top: 6px; }
+
+/* Custom page footer */
+.footer { padding-top: 20px; color: #777; border-top: 1px solid #e5e5e5; }
+
+.container-narrow > hr { margin: 30px 0; }
+
+/* Main marketing message and sign up button */
+.jumbotron { text-align: center; border-bottom: 1px solid #e5e5e5;
+
+	.btn { font-size: 21px; padding: 14px 24px; }
+
+}
+
+/* Supporting marketing content */
+.marketing { margin: 40px 0;
+
+	p + h4 { margin-top: 28px; }
+
+}
+
+.logo { background: url("../images/logo.svg") 0 0 no-repeat; width: 267px; height: 66px; margin-top: 10px; margin-left: 52px; }
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+	/* Remove the padding we set earlier */
+	.header,
+	.marketing,
+	.footer { padding-left: 0; padding-right: 0; }
+
+	/* Remove the bottom border on the jumbotron for visual effect */
+	.jumbotron { border-bottom: 0; }
+
+}
+
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+.align-top { vertical-align: top; }
+.align-middle { vertical-align: middle; }
+.align-bottom { vertical-align: bottom; }
