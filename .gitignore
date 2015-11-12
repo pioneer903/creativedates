@@ -3,6 +3,13 @@ bin/
 bin-debug/
 bin-release/
 
+/node_modules
+/dist
+/.tmp
+/.sass-cache
+/bower_components
+/node_modules
+
 # Other files and folders
 .settings/
 
