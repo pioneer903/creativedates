@@ -79,7 +79,7 @@ a.btn { font-size: 18px; line-height: 38px; font-weight: 600; color: $font_color
 
 		.call-to-action { padding: 25px 55px; background: rgba(0,0,0,0.7); height: 218px; width: 386px; position: absolute; top: 170px; right: 53px; -webkit-box-shadow: 5px 5px 0px -1px rgba(0,0,0,0.3); -moz-box-shadow: 5px 5px 0px -1px rgba(0,0,0,0.3); box-shadow: 5px 5px 0px -1px rgba(0,0,0,0.3);
 
-			p { font-weight: 100; font-size: 23px; line-height: 30px; letter-spacing: 3px; }
+			p { font-weight: 100; font-size: 23px; line-height: 30px; letter-spacing: 3px; margin-bottom: 20px; }
 
 			a.btn.red { background: $main_red_color; min-width: 276px; }
 
@@ -89,15 +89,25 @@ a.btn { font-size: 18px; line-height: 38px; font-weight: 600; color: $font_color
 
 }
 
-.container.hero { padding-bottom: 40px; overflow: hidden;
+.container.hero { padding-bottom: 40px; overflow: hidden; position: relative;
 
 	background-color: #9b1b1f; 
 	@include filter-gradient(#9b1b1f, #9b1b1f, horizontal); 
 	@include background-image(linear-gradient(left top,  #9b1b1f 0%,#db2223 50%,#9b1b1f 100%));
 
-	.logo-hero { width: 33%; height: 135px; background: url("../images/logo_hero.png") center no-repeat; margin: 0 auto; }
+	&:after { content:''; background: url("../images/swirl_set_bottom.png") center no-repeat; background-size: contain; position: absolute; bottom: 0; left: 0; display: block; width: 100%; height: 133px; }
 
-	.swirl { width: 33%; height: 100%; display: block; position: absolute; top: -21px; 
+	.logo-hero { width: 33%; height: 135px; margin: 0 auto;
+
+		&:before, &:after { content:''; display: block; height: inherit; width: 100%; }
+
+		&:before { background: url("../images/logo_hero.png") center no-repeat; position: relative; z-index: 2; }
+
+		&:after { background: url("../images/swirl_set_top.png") center no-repeat; position: absolute; top: 0; left: 0; z-index: 1; }
+
+	}
+
+	.swirl { width: 33%; height: 200px; display: block; position: absolute; top: -21px; 
 
 		&.left { background: url("../images/swirl_left.png") 0 0 no-repeat; left: 55px; }
 
@@ -176,7 +186,7 @@ a.btn { font-size: 18px; line-height: 38px; font-weight: 600; color: $font_color
 
 }
 
-.logo { background: url("../images/logo.svg") 0 0 no-repeat; width: 267px; height: 66px; margin-top: 10px; margin-left: 52px; }
+.logo { background: url("../images/logo.svg") 0 0 no-repeat; background-size: contain; width: 267px; height: 66px; margin-top: 12px; margin-left: 52px; }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

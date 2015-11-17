@@ -8829,6 +8829,7 @@ a.btn {
   font-size: 23px;
   line-height: 30px;
   letter-spacing: 3px;
+  margin-bottom: 20px;
 }
 /* line 84, ../../app/styles/main.scss */
 .container.slider div[class*="slide-"] .call-to-action a.btn.red {
@@ -8840,6 +8841,7 @@ a.btn {
 .container.hero {
   padding-bottom: 40px;
   overflow: hidden;
+  position: relative;
   background-color: #9b1b1f;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF9B1B1F', endColorstr='#FF9B1B1F');
@@ -8848,44 +8850,76 @@ a.btn {
   background-image: linear-gradient(to right bottom, #9b1b1f 0%, #db2223 50%, #9b1b1f 100%);
 }
 /* line 98, ../../app/styles/main.scss */
+.container.hero:after {
+  content: '';
+  background: url("../images/swirl_set_bottom.png") center no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 133px;
+}
+/* line 100, ../../app/styles/main.scss */
 .container.hero .logo-hero {
   width: 33%;
   height: 135px;
-  background: url("../images/logo_hero.png") center no-repeat;
   margin: 0 auto;
 }
-/* line 100, ../../app/styles/main.scss */
+/* line 102, ../../app/styles/main.scss */
+.container.hero .logo-hero:before, .container.hero .logo-hero:after {
+  content: '';
+  display: block;
+  height: inherit;
+  width: 100%;
+}
+/* line 104, ../../app/styles/main.scss */
+.container.hero .logo-hero:before {
+  background: url("../images/logo_hero.png") center no-repeat;
+  position: relative;
+  z-index: 2;
+}
+/* line 106, ../../app/styles/main.scss */
+.container.hero .logo-hero:after {
+  background: url("../images/swirl_set_top.png") center no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+/* line 110, ../../app/styles/main.scss */
 .container.hero .swirl {
   width: 33%;
-  height: 100%;
+  height: 200px;
   display: block;
   position: absolute;
   top: -21px;
 }
-/* line 102, ../../app/styles/main.scss */
+/* line 112, ../../app/styles/main.scss */
 .container.hero .swirl.left {
   background: url("../images/swirl_left.png") 0 0 no-repeat;
   left: 55px;
 }
-/* line 104, ../../app/styles/main.scss */
+/* line 114, ../../app/styles/main.scss */
 .container.hero .swirl.right {
   background: url("../images/swirl_right.png") 0 0 no-repeat;
   right: 55px;
 }
-/* line 108, ../../app/styles/main.scss */
+/* line 118, ../../app/styles/main.scss */
 .container.hero .hero-wrapper {
   display: inline-block;
   margin: 0 auto 40px;
   position: relative;
 }
-/* line 110, ../../app/styles/main.scss */
+/* line 120, ../../app/styles/main.scss */
 .container.hero a.btn.black {
   background: #000;
   padding: 10px 40px;
   line-height: 34px;
 }
 
-/* line 114, ../../app/styles/main.scss */
+/* line 124, ../../app/styles/main.scss */
 .container.cant-find {
   clear: both;
   padding: 100px 100px 85px 155px;
@@ -8894,7 +8928,7 @@ a.btn {
   background: linear-gradient(to right, #3d3d3d 0%, #000000 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d3d3d', endColorstr='#000000',GradientType=1 );
 }
-/* line 122, ../../app/styles/main.scss */
+/* line 132, ../../app/styles/main.scss */
 .container.cant-find:before {
   content: '';
   background: url("../images/swirl_left.png") 420px -70px no-repeat;
@@ -8906,14 +8940,14 @@ a.btn {
   top: 0;
   right: 0;
 }
-/* line 124, ../../app/styles/main.scss */
+/* line 134, ../../app/styles/main.scss */
 .container.cant-find p {
   font-size: 29px;
   padding-left: 50px;
   position: relative;
   letter-spacing: 0.3px;
 }
-/* line 126, ../../app/styles/main.scss */
+/* line 136, ../../app/styles/main.scss */
 .container.cant-find p:before {
   content: '';
   background: url("../images/search.svg") no-repeat 0 0;
@@ -8924,17 +8958,17 @@ a.btn {
   top: 0;
   left: 10px;
 }
-/* line 128, ../../app/styles/main.scss */
+/* line 138, ../../app/styles/main.scss */
 .container.cant-find p a {
   color: #da2324;
 }
 
-/* line 134, ../../app/styles/main.scss */
+/* line 144, ../../app/styles/main.scss */
 .navbar, .container {
   width: 100%;
 }
 
-/* line 136, ../../app/styles/main.scss */
+/* line 146, ../../app/styles/main.scss */
 .border-gradient {
   width: 100%;
   height: 1px;
@@ -8944,21 +8978,21 @@ a.btn {
 }
 
 /* Custom page footer */
-/* line 141, ../../app/styles/main.scss */
+/* line 151, ../../app/styles/main.scss */
 .footer .container {
   padding: 15px 0 15px 50px;
 }
-/* line 143, ../../app/styles/main.scss */
+/* line 153, ../../app/styles/main.scss */
 .footer .container a {
   color: #fff;
   margin-left: 10px;
   cursor: pointer;
 }
-/* line 145, ../../app/styles/main.scss */
+/* line 155, ../../app/styles/main.scss */
 .footer .container a:hover {
   color: #fff;
 }
-/* line 149, ../../app/styles/main.scss */
+/* line 159, ../../app/styles/main.scss */
 .footer .container .footer-social {
   display: inline-block;
   float: right;
@@ -8968,55 +9002,56 @@ a.btn {
   top: -5px;
   right: 10px;
 }
-/* line 151, ../../app/styles/main.scss */
+/* line 161, ../../app/styles/main.scss */
 .footer .container .footer-social i {
   opacity: 0.3;
 }
-/* line 153, ../../app/styles/main.scss */
+/* line 163, ../../app/styles/main.scss */
 .footer .container .footer-social i:hover {
   opacity: 1;
 }
 
-/* line 163, ../../app/styles/main.scss */
+/* line 173, ../../app/styles/main.scss */
 .container-narrow > hr {
   margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
-/* line 166, ../../app/styles/main.scss */
+/* line 176, ../../app/styles/main.scss */
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
-/* line 168, ../../app/styles/main.scss */
+/* line 178, ../../app/styles/main.scss */
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
 }
 
 /* Supporting marketing content */
-/* line 173, ../../app/styles/main.scss */
+/* line 183, ../../app/styles/main.scss */
 .marketing {
   margin: 40px 0;
 }
-/* line 175, ../../app/styles/main.scss */
+/* line 185, ../../app/styles/main.scss */
 .marketing p + h4 {
   margin-top: 28px;
 }
 
-/* line 179, ../../app/styles/main.scss */
+/* line 189, ../../app/styles/main.scss */
 .logo {
   background: url("../images/logo.svg") 0 0 no-repeat;
+  background-size: contain;
   width: 267px;
   height: 66px;
-  margin-top: 10px;
+  margin-top: 12px;
   margin-left: 52px;
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
-  /* line 185, ../../app/styles/main.scss */
+  /* line 195, ../../app/styles/main.scss */
   .header,
   .marketing,
   .footer {
@@ -9025,39 +9060,37 @@ a.btn {
   }
 
   /* Remove the bottom border on the jumbotron for visual effect */
-  /* line 190, ../../app/styles/main.scss */
+  /* line 200, ../../app/styles/main.scss */
   .jumbotron {
     border-bottom: 0;
   }
 }
-/* line 194, ../../app/styles/main.scss */
+/* line 204, ../../app/styles/main.scss */
 .align-left {
   text-align: left;
 }
 
-/* line 195, ../../app/styles/main.scss */
+/* line 205, ../../app/styles/main.scss */
 .align-center {
   text-align: center;
 }
 
-/* line 196, ../../app/styles/main.scss */
+/* line 206, ../../app/styles/main.scss */
 .align-right {
   text-align: right;
 }
 
-/* line 197, ../../app/styles/main.scss */
+/* line 207, ../../app/styles/main.scss */
 .align-top {
   vertical-align: top;
 }
 
-/* line 198, ../../app/styles/main.scss */
+/* line 208, ../../app/styles/main.scss */
 .align-middle {
   vertical-align: middle;
 }
 
-/* line 199, ../../app/styles/main.scss */
+/* line 209, ../../app/styles/main.scss */
 .align-bottom {
   vertical-align: bottom;
 }
-
-/*# sourceMappingURL=main.css.map */
