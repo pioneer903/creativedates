@@ -1,4 +1,5 @@
-'use strict';
+(function () {
+  'use strict';
 
 /**
  * @ngdoc function
@@ -15,3 +16,4 @@ angular.module('creativedatesApp')
       'Karma'
     ];
   });
+})();
