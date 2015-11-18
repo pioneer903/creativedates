@@ -16,6 +16,8 @@ html, body { height: 100%; }
 
 body { padding: 0; background-color: $main_red_color; width: 100%; font-family: 'raleway', sans-serif; color: $font_color; }
 
+h2 { font-family: 'raleway-light'; }
+
 .relative { position: relative; }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -36,6 +38,8 @@ body { padding: 0; background-color: $main_red_color; width: 100%; font-family: 
 	}
 
 }
+
+.no-margin { margin: 0 !important; }
 
 .nav {
 
@@ -207,3 +211,9 @@ a.btn { font-size: 18px; line-height: 38px; font-weight: 600; color: $font_color
 .align-top { vertical-align: top; }
 .align-middle { vertical-align: middle; }
 .align-bottom { vertical-align: bottom; }
+
+.hero { height: 400px; }
+
+.hero-img { background: url("../images/hero_home.jpg") center no-repeat; height: 330px; position: relative; top: 50%; margin: -165px auto 0 auto; width: 90%; }
+
+.order-total { background: rgba(0,0,0,0.3); }

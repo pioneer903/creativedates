@@ -8,7 +8,6 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -22,7 +21,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+    <div class="header clearfix">
       <div class="navbar pull-left" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -34,7 +33,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand logo" href="javascript:void(0);"></a>
+            <a class="navbar-brand logo" href="#/"></a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -49,7 +48,7 @@
         </div>
         <div class="border-gradient"></div>
       </div>
-      <div class="social-bar">
+      <div class="social-bar" style="display: none;">
         <i class="fa fa-facebook-square"></i>
         <i class="fa fa-twitter-square"></i>
         <i class="fa fa-instagram"></i>
@@ -59,6 +58,10 @@
     </div>
 
 		<div ng-view=""></div>
+
+    <div class="container cant-find">
+      <p>Can't find what you're looking for? <a href="">Suggest an Event or Venue!</a></p>
+    </div>
 
     <div class="footer">
       <div class="container">
@@ -100,7 +103,6 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/moment/moment.js"></script>
-    <script src="bower_components/fullcalendar/dist/fullcalendar.js"></script>
     <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
